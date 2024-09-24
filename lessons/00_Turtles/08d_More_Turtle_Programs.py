@@ -37,6 +37,11 @@ def set_turtle_image(turtle, image_name):
 
 set_turtle_image(t, 'pikachu.gif')
 
+set_turtle_image(t, 'pikachu.gif')
+
+for i in range(4):
+    t.goto(200, 200)
+    t.goto(-200, -200)
 
 
     

@@ -17,4 +17,35 @@ screen.bgcolor('white')
 
 t = turtle.Turtle()
 
-... # Your Code Here
+import turtle
+
+
+
+# Set up the screen
+screen = turtle.Screen()
+screen.setup(width=600, height=600)
+
+# Create a turtle and set its shape to the custom GIF
+t = turtle.Turtle()
+
+def set_turtle_image(turtle, image_name):
+    """Set the turtle's shape to a custom image."""
+
+    from pathlib import Path
+    image_dir = Path(__file__).parent / "images"
+    image_path = str(image_dir / image_name)
+
+    screen = turtle.getscreen()
+    screen.addshape(image_path)
+    turtle.shape(image_path)
+
+
+set_turtle_image(t, 'leaguebot_bolt.gif')
+t.turtlesize(stretch_wid=10, stretch_len=10, outline=4)
+for i in range(4):
+    t.goto(200, 200)
+    t.goto(-200, -200)
+
+    
+x = random.randint(-300, 300)
+y = random.randint(-300, 300)
